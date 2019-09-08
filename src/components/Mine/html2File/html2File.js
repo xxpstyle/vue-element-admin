@@ -1,3 +1,10 @@
+/*
+ *html 转其它文件
+ * @Author: xxp
+ * @Date: 2019-09-07 12:27:23
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2019-09-07 17:10:25
+ */
 import html2canvas from 'html2canvas' // html转canvas
 import JsPDF from 'jspdf' // 图片转PDF
 export default {

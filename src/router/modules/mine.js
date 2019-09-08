@@ -1,4 +1,9 @@
-/** When your routing table is too long, you can split it into small modules**/
+/*
+ * @desc: 收集组件的路由
+ * @Author: xxp
+ * @Date: 2019-09-07 10:08:48
+ * @LastEditTime: 2019-09-08 15:38:35
+ */
 
 import Layout from '@/views/layout/Layout'
 
@@ -25,6 +30,14 @@ const mineRouter = {
     name: 'html2pdf',
     meta: {
       title: 'html2pdf'
+    }
+  },
+  {
+    path: 'myCamera',
+    component: () => import('@/views/mine/cameraTest'),
+    name: 'myCamera',
+    meta: {
+      title: 'pc打开摄像头'
     }
   }]
 }
