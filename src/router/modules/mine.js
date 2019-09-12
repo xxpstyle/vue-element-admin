@@ -26,6 +26,21 @@ const mineRouter = {
     meta: {
       title: 'html2pdf'
     }
+  }, {
+    path: 'manager-page',
+    component: () => import('@/views/mine/manager-page'),
+    name: 'manager-page',
+    meta: {
+      title: 'manager-page'
+    }
+  },
+  {
+    path: 'mergeData',
+    component: () => import('@/views/mine/mergeData'),
+    name: 'mergeData',
+    meta: {
+      title: 'mergeData'
+    }
   }]
 }
 export default mineRouter
