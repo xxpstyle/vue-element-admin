@@ -41,6 +41,14 @@ const mineRouter = {
     meta: {
       title: 'mergeData'
     }
+  },
+  {
+    path: 'org-tree',
+    component: () => import('@/views/mine/org-tree/index'),
+    name: 'org-tree',
+    meta: {
+      title: 'org-tree'
+    }
   }]
 }
 export default mineRouter

@@ -1,3 +1,5 @@
+// npm install html2canvas
+// npm install jspdf
 import html2canvas from 'html2canvas' // html转canvas
 import JsPDF from 'jspdf' // 图片转PDF
 export default {

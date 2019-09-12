@@ -64,6 +64,8 @@
   </section>
 </template>
 <script>
+const api = ''
+// import api from '../../api/login.js'
 export default {
   name: 'ManagerPage',
   data() {

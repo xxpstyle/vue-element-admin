@@ -7,8 +7,7 @@
       highlight-current-row
       stripe
       border
-      style="width: 100%;"
-      @selection-change="selsChange">
+      style="width: 100%;">
       <el-table-column type="selection" width="50"/>
       <el-table-column type="index" label="序号" width="100"/>
       <el-table-column prop="userCode" label="账号"/>
@@ -34,31 +33,28 @@ export default {
     }
   },
   mounted() {
-    let contactDot = 0
-    this.dataList.forEach((item, index) => {
-      item.index = index
-      if (index === 0) {
-        this.spanArr.push(1)
-      } else {
-        if (item.userName === this.dataList[index - 1].userName) {
-          this.spanArr[contactDot] += 1
-          this.spanArr.push(0)
-        } else {
-          this.spanArr.push(1)
-          contactDot = index
-        }
-      }
-    })
+    this.getSpanArr()
   }, methods: {
+    // 获取合并的行数
+    getSpanArr() {
+      let contactDot = 0
+      this.dataList.forEach((item, index) => {
+        item.index = index
+        if (index === 0) {
+          this.spanArr.push(1)
+        } else {
+          if (item.userName === this.dataList[index - 1].userName) {
+            this.spanArr[contactDot] += 1
+            this.spanArr.push(0)
+          } else {
+            this.spanArr.push(1)
+            contactDot = index
+          }
+        }
+      })
+    },
     objectSpanMethod({ row, column, rowIndex, columnIndex }) {
-      // if (columnIndex === 0) {
-      //   const _row = this.spanArr[rowIndex]
-      //   const _col = _row > 0 ? 1 : 0
-      //   return {
-      //     rowspan: _row,
-      //     colspan: _col
-      //   }
-      // }
+      // 对下标为1的列进行合并
       if (columnIndex === 1) {
         const _row = this.spanArr[rowIndex]
         const _col = _row > 0 ? 1 : 0
