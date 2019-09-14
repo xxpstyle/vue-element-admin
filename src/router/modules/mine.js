@@ -49,6 +49,14 @@ const mineRouter = {
     meta: {
       title: 'org-tree'
     }
+  },
+   {
+    path: 'myCamera',
+    component: () => import('@/views/mine/cameraTest'),
+    name: 'myCamera',
+    meta: {
+      title: 'pc打开摄像头'
+    }
   }]
 }
 export default mineRouter
