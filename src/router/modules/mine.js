@@ -33,12 +33,45 @@ const mineRouter = {
     }
   },
   {
+    path: 'manager-page',
+    component: () => import('@/views/mine/manager-page'),
+    name: 'manager-page',
+    meta: {
+      title: 'manager-page'
+    }
+  },
+  {
+    path: 'mergeData',
+    component: () => import('@/views/mine/mergeData'),
+    name: 'mergeData',
+    meta: {
+      title: 'mergeData'
+    }
+  },
+  {
+    path: 'org-tree',
+    component: () => import('@/views/mine/org-tree/index'),
+    name: 'org-tree',
+    meta: {
+      title: 'org-tree'
+    }
+  },
+  {
     path: 'myCamera',
     component: () => import('@/views/mine/cameraTest'),
     name: 'myCamera',
     meta: {
       title: 'pc打开摄像头'
     }
-  }]
+  },
+  {
+    path: 'uploadImg',
+    component: () => import('@/views/mine/uploadImgTest'),
+    name: 'uploadImg',
+    meta: {
+      title: '图片上传'
+    }
+  }
+  ]
 }
 export default mineRouter

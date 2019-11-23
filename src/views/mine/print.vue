@@ -6,9 +6,11 @@
  -->
 <template>
   <section ref="print" style="margin: 10px 20px 0;">
-    <el-button type="primary" class="no-print" @click="doPrint">打印</el-button>打印内容
+    <el-button type="primary" class="no-print" @click="doPrint">打印</el-button>
+    打印内容
     <div class="no-print">不要打印我</div>
-    <div style="page-break-before: always;">我会分页打印</div>
+    <div style="page-break-before: always;">{{ it }}{{ abc }}我会分页打印</div>
+
   </section>
 </template>
 
@@ -24,6 +26,7 @@ export default {
   name: 'Print',
   data() {
     return {
+      abc: 1
     }
   },
   methods: {
@@ -32,6 +35,8 @@ export default {
     },
     test() {
       this.doPrint()
+      this.test = 1
+      this.abc = 2
     }
   }
 }
