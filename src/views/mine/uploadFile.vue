@@ -8,7 +8,7 @@
       :on-exceed="handleExceed"
       :file-list="fileList"
       :http-request="uploadFile"
-      :accept= "accept"
+      :accept="accept"
       :limit="10"
       action=""
       list-type="picture-card"
@@ -22,6 +22,13 @@
   </div>
 </template>
 <script>
+/**
+   * 图片上传封装
+   * @param fileList 文件初始化数据 [{'url': '','name': '123.png'}]
+   * @param uploadType 文件类型
+   * @param limit 文件个数限制
+   * @param fileSize 文件大小限制
+   */
 export default {
   props: {
     fileList: {

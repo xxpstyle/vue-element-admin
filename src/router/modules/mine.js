@@ -66,7 +66,7 @@ const mineRouter = {
   },
   {
     path: 'uploadImg',
-    component: () => import('@/views/mine/uploadImgTest'),
+    component: () => import('@/views/mine/uploadFileTest'),
     name: 'uploadImg',
     meta: {
       title: '图片上传'
