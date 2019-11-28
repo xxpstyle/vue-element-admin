@@ -71,6 +71,14 @@ const mineRouter = {
     meta: {
       title: '图片上传'
     }
+  },
+  {
+    path: 'table',
+    component: () => import('@/views/mine/table'),
+    name: 'table',
+    meta: {
+      title: '表格'
+    }
   }
   ]
 }
